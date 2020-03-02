@@ -1,6 +1,7 @@
 package com.example.restservice.controller;
 
 import com.example.restservice.model.Greeting;
+import com.example.restservice.model.GreetingInput;
 import com.example.restservice.service.GreetingService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class GreetingController {
   }
 
   @PostMapping("/greeting")
-  public Greeting saveGreeting(@RequestBody Greeting greeting) {
-    return greetingService.saveGreeting(greeting.getContent());
+  public Greeting saveGreeting(@RequestBody GreetingInput greeting) {
+    return greetingService.saveGreeting(greeting.toString());
   }
 }

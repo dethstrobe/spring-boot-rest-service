@@ -20,6 +20,10 @@ public class Greeting {
     this.content = content;
   }
 
+  public Greeting() {
+    this.content = "Missing Greeting";
+  }
+
   public long getId() {
     return id;
   }
